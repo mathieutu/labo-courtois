@@ -13,7 +13,7 @@
             <rect width="404" height="392" fill="url(#02f20b47-fd69-4224-a62a-4c9de5c763f7)" />
           </svg>
         </div>
-        <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
+        <div class="relative mx-auto px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
           <!-- Testimonial card-->
           <div class="relative w-3xl h-96 rounded-2xl shadow-xl overflow-hidden">
             <img class="absolute inset-0 h-full w-full object-cover" src="../assets/images/table-nb.png" alt="" />
@@ -22,23 +22,23 @@
         </div>
       </div>
 
-      <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
+      <div class="relative mx-auto px-4 sm:max-w-3xl sm:px-6 lg:px-0">
         <!-- Content area -->
         <div class="pt-12 sm:pt-16 lg:pt-20">
           <h2 class="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl">
             Une nouvelle approche du métier.
           </h2>
           <div class="mt-6 text-gray-500 space-y-6">
-            <p class="text-base">
+            <p class="text-lg">
               Notre souhait : créer une <strong>véritable collaboration</strong> entre votre cabinet et notre
               laboratoire, dans un climat de confiance mutuelle.
               Le dialogue et la concertation sont nos maîtres mots et le gage d'atteindre
               notre objectif commun : la satisfaction de vos patients.
             </p>
-            <p class="text-base leading-7">
+            <p class="text-lg leading-7">
               Nous garantissons une fabrication 100% française avec des <strong>produits de qualités</strong>.
             </p>
-            <p class="text-base leading-7">
+            <p class="text-lg leading-7">
               Concernés par un <strong>développement responsable et durable</strong>, respectueux de
               la nature, nos travaux sont emballés à l'aide de papier recyclable.
               De son côté, notre fournisseur principal s'est engagé à limiter au maximum les

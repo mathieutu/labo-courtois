@@ -23,7 +23,7 @@ const machines = [
         <div class="md:max-w-xl lg:max-w-3xl xl:max-w-none">
           <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Le tout numérique</h2>
           <p class="mt-6 text-lg text-gray-500">
-            Le laboratoire est équipé de
+            Notre laboratoire est équipé de
             <strong>machines de dernière technologie</strong>, afin de réaliser vos prothèses dentaires dans les meilleures conditions possibles.
             Ces moyens techniques nous permettent d'être des
             <strong>partenaires performants</strong>.

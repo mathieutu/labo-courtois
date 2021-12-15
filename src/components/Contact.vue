@@ -55,7 +55,7 @@ const adresseUrl = `https://www.google.com/maps/search/Laboratoire+Courtois+${co
           <div class="grid grid-cols-1 lg:grid-cols-3">
             <!-- Contact information -->
             <div
-              class="relative overflow-hidden py-10 px-6 bg-gradient-to-b from-primary-light to-primary rounded-l-lg sm:px-10 xl:p-12"
+              class="relative overflow-hidden py-10 px-6 bg-gradient-to-b from-primary-light to-primary rounded-t-lg lg:rounded-tr-none lg:rounded-l-lg sm:px-10 xl:p-12"
             >
               <!-- Decorative angle backgrounds -->
               <div class="absolute inset-0 pointer-events-none sm:hidden" aria-hidden="true">

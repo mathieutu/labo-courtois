@@ -10,7 +10,7 @@ const prestations = [
 </script>
 <template>
   <div class="py-12 lg:py-24 bg-white">
-    <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
+    <div class="mx-auto px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
       <div class="lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center">
         <div>
           <h2
@@ -26,8 +26,8 @@ const prestations = [
             :key="prestation.name"
             class="col-span-1 flex gap-2 items-center justify-center py-8 px-8 bg-gray-50 "
           >
-            <LogoDent class="text-gray-600 h-8"/>
-            <span class="text-gray-500 font-medium">{{prestation.name}}</span>
+            <LogoDent class="text-gray-600 md:h-8 h-5 flex-shrink-0"/>
+            <span class="text-gray-500 font-medium text-center">{{prestation.name}}</span>
           </div>
         </div>
       </div>
