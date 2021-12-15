@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { MailIcon, PhoneIcon, ClockIcon, LocationMarkerIcon } from '@heroicons/vue/outline/esm/index.js'
+
 const contact = {
   phone: '04 88 86 07 17',
   mail: 'contact@labo-courtois.com',
@@ -51,7 +52,6 @@ const adresseUrl = `https://www.google.com/maps/search/Laboratoire+Courtois+${co
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="relative bg-white rounded-lg shadow-xl">
           <h2 id="contact-heading" class="sr-only">Contact us</h2>
-
           <div class="grid grid-cols-1 lg:grid-cols-3">
             <!-- Contact information -->
             <div
@@ -164,47 +164,69 @@ const adresseUrl = `https://www.google.com/maps/search/Laboratoire+Courtois+${co
                 </dt>
                 <dd class="flex text-base items-center text-white/90">
                   <PhoneIcon class="flex-shrink-0 w-5 h-5 text-white/40" aria-hidden="true" />
-                  <a :href="phoneUrl" target="_blank" rel="noreferer noopener" class="ml-3 hover:opacity-50">{{contact.phone}}</a>
+                  <a
+                    :href="phoneUrl"
+                    target="_blank"
+                    rel="noreferer noopener"
+                    class="ml-3 hover:opacity-50"
+                  >{{ contact.phone }}</a>
                 </dd>
                 <dt>
                   <span class="sr-only">Email</span>
                 </dt>
                 <dd class="flex text-base items-center text-white/90">
                   <MailIcon class="flex-shrink-0 w-5 h-5 text-white/40" aria-hidden="true" />
-                  <a :href="mailUrl" target="_blank" rel="noreferer noopener" class="ml-3 hover:opacity-50">{{contact.mail}}</a>
+                  <a
+                    :href="mailUrl"
+                    target="_blank"
+                    rel="noreferer noopener"
+                    class="ml-3 hover:opacity-50"
+                  >{{ contact.mail }}</a>
                 </dd>
                 <dt>
                   <span class="sr-only">Horaires</span>
                 </dt>
                 <dd class="flex text-base items-center text-white/90">
                   <ClockIcon class="flex-shrink-0 w-5 h-5 text-white/40" aria-hidden="true" />
-                  <span class="ml-3">{{contact.time}}</span>
+                  <span class="ml-3">{{ contact.time }}</span>
                 </dd>
                 <dt>
                   <span class="sr-only">Adresse</span>
                 </dt>
                 <dd class="flex text-base items-center text-white/90">
-                  <LocationMarkerIcon class="flex-shrink-0 w-5 h-5 text-white/40" aria-hidden="true" />
-                  <a :href="adresseUrl" target="_blank" rel="noreferer noopener" class="ml-3 hover:opacity-50">{{contact.address}}</a>
+                  <LocationMarkerIcon
+                    class="flex-shrink-0 w-5 h-5 text-white/40"
+                    aria-hidden="true"
+                  />
+                  <a
+                    :href="adresseUrl"
+                    target="_blank"
+                    rel="noreferer noopener"
+                    class="ml-3 hover:opacity-50"
+                  >{{ contact.address }}</a>
                 </dd>
               </dl>
             </div>
-
             <!-- Contact form -->
             <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
               <h3 class="text-lg font-medium text-gray-900">Envoyez nous un message</h3>
               <form
-            action="/?success=true#contact"
-            data-netlify="true"
-            method="POST"
-            name="contact"
+                action="/?success=true#contact"
+                data-netlify="true"
+                netlify-honeypot="custom-field"
+                method="POST"
+                name="contact"
                 class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
               >
+                <div class="hidden">
+                  <label>
+                    Ne pas remplir si vous êtes humain :
+                    <input name="custom-field" />
+                  </label>
+                </div>
+                <input type="hidden" name="form-name" value="contact" />
                 <div class="sm:col-span-2">
-                  <label
-                    for="nom"
-                    class="block text-sm font-medium text-gray-900"
-                  >Nom</label>
+                  <label for="nom" class="block text-sm font-medium text-gray-900">Nom</label>
                   <div class="mt-1">
                     <input
                       type="text"
@@ -254,10 +276,7 @@ const adresseUrl = `https://www.google.com/maps/search/Laboratoire+Courtois+${co
                 </div>
                 <div class="sm:col-span-2">
                   <div class="flex justify-between">
-                    <label
-                      for="message"
-                      class="block text-sm font-medium text-gray-900"
-                    >Message</label>
+                    <label for="message" class="block text-sm font-medium text-gray-900">Message</label>
                   </div>
                   <div class="mt-1">
                     <textarea
@@ -282,4 +301,4 @@ const adresseUrl = `https://www.google.com/maps/search/Laboratoire+Courtois+${co
     </section>
   </div>
 </template>
-  
+
