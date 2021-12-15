@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@heroicons/vue": "^1.0.5",
+    "sweetalert2": "^11.3.0",
     "vite-ssg": "^0.17.0",
     "vue": "^3.2.6"
   },

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { MailIcon, PhoneIcon, ClockIcon, LocationMarkerIcon } from '@heroicons/vue/outline/esm/index.js'
+import Swal from 'sweetalert2'
+import { onMounted } from 'vue'
 
 const contact = {
   phone: '04 88 86 07 17',
@@ -11,6 +13,18 @@ const contact = {
 const phoneUrl = `tel:${contact.phone}`
 const mailUrl = `mailto:${contact.mail}`
 const adresseUrl = `https://www.google.com/maps/search/Laboratoire+Courtois+${contact.address.replaceAll(' ', '+')}`
+
+onMounted(() => {
+  if (window.location.search.includes('success')) {
+    Swal.fire({
+      icon: 'success',
+      title: 'Merci',
+      showConfirmButton: false,
+      showCloseButton: true,
+      html: 'Votre message a été envoyé avec succès. <br>Nous vous recontacterons dans les plus brefs délais.',
+    })
+  }
+})
 </script>
 
 <template>
@@ -211,7 +225,8 @@ const adresseUrl = `https://www.google.com/maps/search/Laboratoire+Courtois+${co
             <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
               <h3 class="text-lg font-medium text-gray-900">Envoyez nous un message</h3>
               <form
-                action="/?success=true#contact"
+                id="contact-form"
+                action="/?success=true#contact-form"
                 data-netlify="true"
                 netlify-honeypot="custom-field"
                 method="POST"
@@ -302,3 +317,22 @@ const adresseUrl = `https://www.google.com/maps/search/Laboratoire+Courtois+${co
   </div>
 </template>
 
+<style>
+@import "sweetalert2/dist/sweetalert2.min";
+
+html {
+  scroll-behavior: smooth;
+}
+:target {
+  scroll-margin-top: 5rem;
+}
+
+.swal2-modal {
+  @apply rounded-lg !important;
+}
+
+button.swal2-styled.swal2-confirm {
+  @apply bg-primary-light !important;
+}
+
+</style>
