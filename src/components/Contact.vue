@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MailIcon, PhoneIcon, ClockIcon, LocationMarkerIcon } from '@heroicons/vue/outline'
+import { MailIcon, PhoneIcon, ClockIcon, LocationMarkerIcon } from '@heroicons/vue/outline/esm/index.js'
 const contact = {
   phone: '04 88 86 07 17',
   mail: 'contact@labo-courtois.com',
