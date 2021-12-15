@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
+  <div class="bg-gray-50 pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
     <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
       <div class="space-y-6">
         <LogoDent class="h-12 lg:h-20 text-primary" />

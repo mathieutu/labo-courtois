@@ -4,10 +4,15 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Contact: typeof import('./src/components/Contact.vue')['default']
     Description: typeof import('./src/components/Description.vue')['default']
     Hero: typeof import('./src/components/Hero.vue')['default']
     LogoDent: typeof import('./src/components/Logo/LogoDent.vue')['default']
     LogoTexte: typeof import('./src/components/Logo/LogoTexte.vue')['default']
+    Prestations: typeof import('./src/components/Prestations.vue')['default']
+    Team: typeof import('./src/components/Team.vue')['default']
+    Technology: typeof import('./src/components/Technology.vue')['default']
+    Testimonials: typeof import('./src/components/Testimonials.vue')['default']
   }
 }
 

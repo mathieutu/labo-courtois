@@ -1,5 +1,5 @@
 <template>
-  <div class="relative mt-20">
+  <div class="relative pt-20 bg-gray-50">
     <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
       <div class="relative sm:py-16 lg:py-0">
         <div aria-hidden="true" class="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
@@ -15,31 +15,9 @@
         </div>
         <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
           <!-- Testimonial card-->
-          <div class="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden">
+          <div class="relative w-3xl h-96 rounded-2xl shadow-xl overflow-hidden">
             <img class="absolute inset-0 h-full w-full object-cover" src="../assets/images/table-nb.png" alt="" />
-            <!-- TODO Gérer l'affichage de l'image -->
-            <!-- TODO Testiominal ? -->
-            <!--<div class="absolute inset-0 bg-cyan-500 mix-blend-multiply" />-->
-            <!--<div class="absolute inset-0 bg-gradient-to-t from-cyan-600 via-cyan-600 opacity-90" />-->
-            <!--<div class="relative px-8">-->
-            <!--  <div>-->
-            <!--    <img class="h-12" src="https://tailwindui.com/img/logos/workcation.svg?color=white" alt="Workcation" />-->
-            <!--  </div>-->
-            <!--  <blockquote class="mt-8">-->
-            <!--    <div class="relative text-lg font-medium text-white md:flex-grow">-->
-            <!--      <svg class="absolute top-0 left-0 -translate-x-3 -translate-y-2 h-8 w-8 text-cyan-400" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">-->
-            <!--        <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />-->
-            <!--      </svg>-->
-            <!--      <p class="relative">-->
-            <!--        Tincidunt integer commodo, cursus etiam aliquam neque, et. Consectetur pretium in volutpat, diam. Montes, magna cursus nulla feugiat dignissim id lobortis amet.-->
-            <!--      </p>-->
-            <!--    </div>-->
 
-            <!--    <footer class="mt-4">-->
-            <!--      <p class="text-base font-semibold text-cyan-200">Sarah Williams, CEO at Workcation</p>-->
-            <!--    </footer>-->
-            <!--  </blockquote>-->
-            <!--</div>-->
           </div>
         </div>
       </div>
@@ -52,18 +30,18 @@
           </h2>
           <div class="mt-6 text-gray-500 space-y-6">
             <p class="text-base">
-              Notre souhait : créer une véritable collaboration entre votre Cabinet et notre
+              Notre souhait : créer une <strong>véritable collaboration</strong> entre votre cabinet et notre
               laboratoire, dans un climat de confiance mutuelle.
-              Le dialogue et la concertation sont nos maîtres mots et le gage d’atteindre
+              Le dialogue et la concertation sont nos maîtres mots et le gage d'atteindre
               notre objectif commun : la satisfaction de vos patients.
             </p>
             <p class="text-base leading-7">
-              Nous garantissons une fabrication 100% française avec des produits de qualités.
+              Nous garantissons une fabrication 100% française avec des <strong>produits de qualités</strong>.
             </p>
             <p class="text-base leading-7">
-              Concernés par un développement responsable et durable, respectueux de
-              la nature, nos travaux sont emballés à l’aide de papier recyclable.
-              De son côté, notre fournisseur principal s’est engagé à limiter au maximum les
+              Concernés par un <strong>développement responsable et durable</strong>, respectueux de
+              la nature, nos travaux sont emballés à l'aide de papier recyclable.
+              De son côté, notre fournisseur principal s'est engagé à limiter au maximum les
               emballages, dans un souci constant de notre environnement.
             </p>
           </div>
