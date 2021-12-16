@@ -2,33 +2,84 @@ backend:
   name: github
   repo: mathieutu/labo-courtois
   branch: main
-media_folder: "public/img/"
-public_folder: "/img/"
+local_backend: true
+media_folder: public/img/
+public_folder: /img/
 collections:
-  - label: "Textes"
-    name: "textes"
+  - label: Page d'accueil
+    name: home
     files:
-    - name: "textes"
-      label: "Textes"
-      label_singular: "Texte"
-      file: "src/data.json"
-      create: true
-      delete: true
+    - name: description
+      label: Description
+      file: src/data/description.md
       fields:
-        - { label: "Titre", name: "titre", widget: "string" }
-        - { label: "Logo", name: "img", widget: "image", allow_multiple: false }
+        - { label: Logo, name: imageUrl, widget: image, allow_multiple: false }
+        - { label: Titre, name: title, widget: string }
+        - { label: Text, name: body, widget: markdown, sanitize_preview: true, buttons: [bold, italic, link], editor_components: [] }
 
-
-        - label: Miel
-          name: list
+    - name: prestations
+      label: Prestations
+      file: src/data/prestations.md
+      fields:
+        - { label: Titre, name: title, widget: string }
+        - { label: Text, name: body, widget: markdown, sanitize_preview: true, buttons: [bold, italic, link], editor_components: [] }
+        - label: Prestations
+          label_singular: Prestation
+          name: prestations
           widget: list
+          collapsed: true
           fields:
-            - { label: "Titre", name: "titre", widget: "string" }
-            - { label: "Provenance", name: "provenance", widget: "string" }
-            - { label: "Prix", name: "prix", widget: "number", value_type: "float", step: 0.01 }
-            - { label: "Rupture de stock", name: "rupture", widget: "boolean", default: false }
-            - { label: "Description", name: "description", widget: "text" }
-            - { label: 'Couleur', name: 'color', widget: 'color', allowInput: true }
-            - { label: "Quantité", name: "quantite", widget: "string", default: "500g"}
-            - { label: "Image", name: "img", widget: "image", allow_multiple: false }
-            - { label: "Masquer", name: "hide", widget: "boolean", default: false }
+            - { label: Nom, name: name, widget: string }
+            - { label: Icon, name: iconUrl, widget: image, allow_multiple: false }
+
+    - name: technology
+      label: Technologie
+      file: src/data/technology.md
+      fields:
+        - { label: Titre, name: title, widget: string }
+        - { label: Text, name: body, widget: markdown, sanitize_preview: true, buttons: [bold, italic, link], editor_components: [] }
+        - label: Machines
+          label_singular: Machine
+          name: machines
+          widget: list
+          collapsed: true
+          fields:
+            - { label: Nom, name: name, widget: string }
+            - { label: Image, name: imageUrl, widget: image, allow_multiple: false }
+
+    - name: team
+      label: L'équipe
+      file: src/data/team.md
+      fields:
+        - { label: Titre, name: title, widget: string }
+
+  - name: team
+    label: Détails de l'équipe
+    identifier_field: name
+    folder: src/data/team
+    create: true
+    label_singular: Personne
+    fields:
+      - { label: Nom, name: name, widget: string }
+      - { label: Image, name: imageUrl, widget: image, allow_multiple: false }
+      - { label: Role, name: role, widget: string }
+      - { label: Description, name: body, widget: markdown, sanitize_preview: true, buttons: [bold, italic, link], editor_components: [] }
+
+  - name: testimonials
+    label: Détails des témoignages
+    identifier_field: company
+    folder: src/data/testimonials
+    create: true
+    label_singular: Témoignage
+    fields:
+      - { label: Company, name: company, widget: string }
+      - { label: Logo, name: logoUrl, widget: image, allow_multiple: false, required: false }
+      - { label: Texte, name: body, widget: markdown, sanitize_preview: true, buttons: [bold, italic, link], editor_components: [] }
+      - label: Auteur
+        name: author
+        widget: object
+        summary: '{{fields.name}}'
+        fields:
+          - { label: Nom, name: name, widget: string }
+          - { label: Image, name: imageUrl, widget: image, allow_multiple: false }
+          - { label: Role, name: role, widget: string }
