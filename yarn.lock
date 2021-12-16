@@ -2926,6 +2926,11 @@ pkg-dir@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
+pnpm@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/pnpm/-/pnpm-6.24.1.tgz#9abac8113b4e012b7be8f18c65ca2f2489a801eb"
+  integrity sha512-gvXXhgSfdq27ASRSd9121GtRXqnZ5RMeaj/HDlsRjV5XTBWCMJZvLIdz6SiSeDQas/+6w9PNz73vFR0l9j+XYA==
+
 postcss-js@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/postcss-js/-/postcss-js-3.0.3.tgz#2f0bd370a2e8599d45439f6970403b5873abda33"
